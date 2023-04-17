@@ -1,0 +1,124 @@
+.scaled {
+  transition-duration: 0.25s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.cardShadow {
+  box-shadow: 0px 0px 12px #000000;
+}
+
+// Shadow for background of tokes
+// .shadow{
+//   box-shadow: 1px 3px 10px 0px rgba(168,166,166,0.39);
+// -webkit-box-shadow: 1px 3px 10px 0px rgba(168,166,166,0.39);
+// -moz-box-shadow: 1px 3px 10px 0px rgba(168,166,166,0.39);
+// }
+
+.bg-gradient {
+  background: linear-gradient(
+    360deg,
+    rgba(41, 41, 41, 0.8) 0%,
+    rgba(41, 41, 41, 0.6) 27.6%,
+    rgba(41, 41, 41, 0.1) 72.4%,
+    rgba(41, 41, 41, 0) 100%
+  );
+  pointer-events: none;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.transfer-button {
+  &:hover {
+    background-color: #5a5ffa;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-duration: 150ms;
+    border: 1px solid #5a5ffa;
+  }
+  &:active {
+    background-color: #282dc8;
+    border: 1px solid #282dc8;
+  }
+
+  svg {
+    animation: wiggle;
+    animation-duration: 250ms;
+
+    * {
+      transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+      transition-duration: 150ms;
+    }
+  }
+}
+
+@keyframes slideUp {
+  from {
+    top: 90%;
+    opacity: 0.1;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.pop-up {
+  animation: slideUp;
+  animation-duration: 0.8s;
+  transform: translate(-50%, -50%);
+}
+
+.pop-up-fade-out {
+  animation: fadeOut;
+  animation-duration: 0.6s;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes gradient {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 100%;
+  }
+}
+
+.skeleton-image {
+  background: linear-gradient(270deg, #1c1c1c 0%, #988787 51.56%, #151515 100%);
+  background-size: 800% 100%;
+  animation: 1.5s ease 0s infinite normal both running gradient;
+  animation-direction: normal;
+}
+
+.skeleton-caption {
+  background: linear-gradient(269.13deg, #2e2e2e 0%, #988787 73.44%);
+  background-size: 800% 100%;
+  animation: 1.5s ease 0s infinite normal both running gradient;
+  animation-direction: reverse;
+}

@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter/inter.ttf') format('truetype'),
+    url('../fonts/Inter/inter.woff') format('woff'),
+    url('../fonts/Inter/inter.woff2') format('woff2');
+  font-weight: 100 900;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../fonts/SpaceMono/spacemono-regular.ttf') format('truetype'),
+    url('../fonts/SpaceMono/spacemono-regular.woff') format('woff'),
+    url('../fonts/SpaceMono/spacemono-regular.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  src: url('../fonts/SpaceMono/spacemono-bold.ttf') format('truetype'),
+    url('../fonts/SpaceMono/spacemono-bold.woff') format('woff'),
+    url('../fonts/SpaceMono/spacemono-bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+html {
+  background-color: #121212;
+  color: #fafafa !important;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.last-bid-blurred-bg {
+  backdrop-filter: blur(4px);
+}
+
+
+@keyframes fadeout {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.token-buttons:hover  #tokenSellingBtn{
+  display: contents;
+
+}
+
+
+.listed-token:hover #lastBidDiv {
+  display: flex;
+  animation: fadeout;
+  animation-duration: 1s;
+}
+
+.listed-token-time-section {
+  transform: translate(-50%, -115%);
+  left: 50%;
+}
+
+.listed-token-remainder-blocks:hover .listed-token-time-section {
+  display: block;
+  animation: fadeout;
+  animation-duration: 0.5s;
+}
